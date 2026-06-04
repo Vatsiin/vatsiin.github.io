@@ -1,51 +1,116 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-     <meta chartset="UTF-8">
+     <meta charset="UTF-8">
     <title>INRI Archive</title>
-     <link rel="icon" type="image/x-icon" href="mim.jpg">
-     <div class="duyuru">
-        <span class="yanip-sonen-yazi">DUYURU:HARİTALAR SEÇENEĞİ EKLENDİ!!</span> 
-        <br>
-        <span class="yanip-sonen-yazi">DUYURU:FOTOĞRAFLAR SEÇENEĞİ EKLENDİ!!</span>  
-        <br>
-        <span class="yanip-sonen-yazi">DUYURU:SİTEMİZE 7 HAZİRAN TARİHİNE KADAR GÜNCELLEME YAPILMAYACAKTIR!!</span> 
-    </div>
+    <link rel="icon" type="image/x-icon" href="mim.jpg">
 <style>
+
     .duyuru-kutusu {
-    text-align: center;
+        position: fixed;
+        left:10px;
+        top:50px;
+        width: 300px;
+        text-align: left;
+        z-index: 999;
+
+    }
+
+    .yanip-sonen-yazi {
+        color: #ff3333; 
+        font-weight: bold;
+        font-size: 18px;
+        animation: blinkEffect 1s linear infinite; 
+    }
+
+    @keyframes blinkEffect {
+        0% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    body {
+        background-color: #EFEFED;
+        color: #111111;            
+        font-family: "Times New Roman", Times, Georgia, serif;
+    }
+
+    h1, h2 {
+        font-weight: normal;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #800000;
+        text-decoration: underline;
+    }
+
+.archive-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px 30px;                       
+    padding: 0;
     margin: 20px 0;
-    font-family: sans-serif;
+    list-style-type: none;                
 }
 
-.yanip-sonen-yazi {
-    color: #ff3333; /* Dikkat çekmesi için kırmızı tonu, istediğin renkle değiştirebilirsin */
-    font-weight: bold;
-    font-size: 18px;
+.archive-list li{
+    border-bottom: 1px dashed #d0cbae;
+    padding-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+    .archive-list {
+        grid-template-columns: 1fr; 
+
+        .archive-list {
+            position: static;
+            width: 100px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight:900;
+    letter-spacing:normal;
+    color:#000000;
+    margin-bottom: 10px;
+
+}
     
-    /* Yazının 1 saniyede bir sonsuza kadar yanıp sönmesini sağlayan sihirli satır */
-    animation: blinkEffect 1s linear infinite; 
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* Yanıp sönme hızını ve şeffaflığını ayarlayan animasyon döngüsü */
-@keyframes blinkEffect {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+p {
+    font-family:serif;
 }
+
 </style>
-     
+
 </head>
 <body>
     <div style="max-width: 650px; margin:0 auto; padding: 40px 20px;">
-       <img src="ataht.jpg">
-       <h1>INRI ARCHIVE</h1>
-       <p><a href="mailto:mistervatsin0@gmail.com">Öneri ve Şikayetleriniz İçin</a></p>
-       <p><a href="https://patreon.com/inriarchive?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink">Bizlere Destek Olmak İsterseniz PATREON</a></p>
-
+       <h1 style="text-align: center;">INRI Archive</h1>
+       <div class="duyuru-kutusu"> 
+       <span class="yanip-sonen-yazi">SİTEMİZ YENİLENMİŞTİR!!</span>
+       <br>
+       <span class="yanip-sonen-yazi">YENİ BELGELER EKLENMİŞTİR!!</span>
+       </div>
+       <img src="ataht.jpg" style="width: 100%; height: auto;">
+       <p style="text-align: center;"><a href="mailto:mistervatsin0@gmail.com">Öneri ve Şikayetleriniz İçin</a></p>
+       <p style="text-align: center;"><a href="https://patreon.com/inriarchive?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink">Bizlere Destek Olmak İsterseniz PATREON</a></p>
        <h2>Arşivdeki Belgeler</h2>
 
-       <ul style="text-align:left; padding-left: 20px; line-height:1.8">
+       <ul class="archive-list">
            <li><a href="wells.html">H.G. WELLS DÜNYA TARİHİ (1927)</a></li>
            <li><a href="harbi.umumi.html">HARBİ UMUMİNİN MENŞEİLERİ (1915)</a></li>
            <li><a href="minber.ro.html">MİNBER GAZETESİ MUSTAFA KEMAL PAŞA RÖPORTAJI (1918)</a></li>
@@ -54,14 +119,11 @@
            <li><a href="harpmec.html">HARP MECMUASI</a></li>
            <li><a href="hat.html">DEVLET BELGELERİ</a></li>
            <li><a href="abrahaml.html">ABRAHAM LINCOLN (1885)</a></li>
-           <li><a href="haritalar.html">HARİTALAR</li>
+           <li><a href="haritalar.html">HARİTALAR</a></li>
            <li><a href="fotoğraflar.html">FOTOĞRAFLAR</a></li>
        </ul>
-       <img src="mahmudhat.jpg" width="500">
 
-    </div></body>
+    </div>
+
+</body>
 </html>
-
-
-
-
