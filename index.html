@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="INRI Archive - Osmnalıca Belge Çevirileri ve Eskilere Dair Her Şey">
+    <meta name="description" content="INRI Archive - Osmanlıca Belge Çevirileri ve Eskilere Dair Her Şey">
     <meta name="keywords" content="inri archive, inri, osmanlıca, belge, çeviri, eski, devlet, savaş, harp, birinci dünya savaşı">
     <title>INRI Archive</title>
     <link rel="icon" type="image/x-icon" href="mim.jpg">
@@ -17,7 +17,6 @@
         width: 300px;
         text-align: left;
         z-index: 999;
-
     }
 
     .yanip-sonen-yazi {
@@ -34,6 +33,11 @@
     }
 
     body {
+        background-image: linear-gradient(rgba(239, 239, 237, 0.85), rgba(239, 239, 237, 0.85)), url(bonapartee.webp);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         background-color: #EFEFED;
         color: #111111;            
         font-family: "Times New Roman", Times, Georgia, serif;
@@ -53,24 +57,24 @@
         text-decoration: underline;
     }
 
-.arsiv-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 15px 30px;                       
-    padding: 0;
-    margin: 20px 0;
-    list-style-type: none;                
-}
-
-.arsiv-list li{
-    border-bottom: 1px dashed #d0cbae;
-    padding-bottom: 6px;
-}
-
-@media (max-width: 600px) {
     .arsiv-list {
-        grid-template-columns: 1fr; 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px 30px;                               
+        padding: 0;
+        margin: 20px 0;
+        list-style-type: none;                               
+    }
 
+    .arsiv-list li{
+        border-bottom: 1px dashed #d0cbae;
+        padding-bottom: 6px;
+    }
+
+    @media (max-width: 600px) {
+        .arsiv-list {
+            grid-template-columns: 1fr; 
+        }
         .archive-list {
             position: static;
             width: 100px;
@@ -78,167 +82,170 @@
             margin-bottom: 20px;
         }
     }
-}
 
-h1 {
-    font-size: 3.5rem;
-    font-weight:900;
-    letter-spacing:normal;
-    color:#000000;
-    margin-bottom: 10px;
-
-}
-    
-
-h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-p {
-    font-family:serif;
-}
-
-.topnav {
-    background-color: #EFEFED;
-    padding: 10px 0;
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.search-wrapper {
-    margin-right: 16px;
-    position: relative;
-    width:300px;
-    z-index: 1000;
-}
-
-.topnav input[type=text] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    box-sizing: border-box;
-    background-color: white;
-}
-
-.search-results-dropdown {
-    position: absolute;
-    top: 100%; 
-    left: 0;
-    width: 100%;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-top: none;
-    max-height: 350px;
-    overflow-y: auto;
-    z-index: 1001;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-    display: none; 
-}
-
-.search-result-item {
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.search-result-item:last-child {
-    border-bottom: none;
-}
-
-.search-result-item:hover {
-    background-color: #f5f5f5;
-}
-
-.result-title {
-    font-weight: bold;
-    color: #000000;
-    font-size: 15px;
-    font-family: sans-serif;
-}
-
-.result-desc {
-    font-size: 13px;
-    color: #555;
-    margin-top: 4px;
-    font-family: "Times New Roman", Times, serif;
-    font-style: italic; 
-}
-
-@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 3.5rem;
+        font-weight:900;
+        letter-spacing:normal;
+        color:#000000;
+        margin-bottom: 10px;
+    }
         
-        .arsiv-list {
-            grid-template-columns: 1fr !important; 
-            gap: 15px 0 !important;
-        }
-
-        .arsiv-list li a {
-            display: block !important;
-            font-size: 18px !important; 
-            padding: 10px 0 !important;
-        }
-
-        .topnav {
-            position: relative !important;
-            display: block !important;
-            padding: 10px !important;
-            padding-bottom: 90px !important; 
-        }
-
-        /* 3. Arama Kutusu Mobilde Devasa Genişlikte */
-        .search-wrapper {
-            width: 100% !important;
-            margin-right: 0 !important;
-            position: relative !important;
-        }
-
-        .topnav input[type=text] {
-            height: 52px !important; 
-            font-size: 18px !important;
-            padding: 12px !important;
-            border-radius: 8px 8px 0 0 !important; 
-            border: 1px solid #b5b5b5 !important;
-        }
-
-        .search-results-dropdown {
-            top: 52px !important;
-            z-index: 2000 !important; 
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2) !important;
-        }
-
-        .duyuru-kutusu {
-            position: absolute !important;
-            top: 62px !important; 
-            left: 10px !important;
-            right: 10px !important;
-            width: auto !important; 
-            text-align: center !important; 
-            z-index: 999 !important;
-            background-color: #EFEFED !important; 
-            border: 1px solid #ffc9c9 !important;
-            border-top: none !important; 
-            border-radius: 0 0 8px 8px !important; 
-            padding: 12px !important;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.05) !important;
-        }
-
-        .yanip-sonen-yazi {
-            font-size: 15px !important; 
-            display: inline-block !important;
-            margin: 2px 0 !important;
-        }
+    h2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
+    p {
+        font-family:serif;
+    }
+
+    .topnav {
+        background-color: transparent; 
+        padding: 10px 0;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .search-wrapper {
+        margin-right: 16px;
+        position: relative;
+        width: 250px;
+        z-index: 1000;
+    }
+
+    .topnav input[type=text] {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid rgba(17, 17, 17, 0.3); 
+        border-radius: 4px;
+        font-size: 16px;
+        box-sizing: border-box;
+        background-color: transparent; 
+        color: #111111;
+        outline: none;
+        font-family: sans-serif;
+    }
+
+    .topnav input[type=text]::placeholder {
+        color: rgba(17, 17, 17, 0.5); 
+    }
+
+    .search-results-dropdown {
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95); 
+        border: 1px solid #ccc;
+        border-top: none;
+        max-height: 350px;
+        overflow-y: auto;
+        z-index: 1001;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        display: none; 
+    }
+
+    .search-result-item {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .search-result-item:last-child {
+        border-bottom: none;
+    }
+
+    .search-result-item:hover {
+        background-color: #f5f5f5;
+    }
+
+    .result-title {
+        font-weight: bold;
+        color: #000000;
+        font-size: 15px;
+        font-family: sans-serif;
+    }
+
+    .result-desc {
+        font-size: 13px;
+        color: #555;
+        margin-top: 4px;
+        font-family: "Times New Roman", Times, serif;
+        font-style: italic; 
+    }
+
+    @media screen and (max-width: 768px) {
+            
+            .arsiv-list {
+                grid-template-columns: 1fr !important; 
+                gap: 15px 0 !important;
+            }
+
+            .arsiv-list li a {
+                display: block !important;
+                font-size: 18px !important; 
+                padding: 10px 0 !important;
+            }
+
+            .topnav {
+                position: relative !important;
+                display: block !important;
+                padding: 10px !important;
+                padding-bottom: 90px !important; 
+            }
+
+            .search-wrapper {
+                width: 100% !important;
+                margin-right: 0 !important;
+                position: relative !important;
+            }
+
+            .topnav input[type=text] {
+                height: 52px !important; 
+                font-size: 18px !important;
+                padding: 12px !important;
+                border-radius: 8px 8px 0 0 !important; 
+                border: 1px solid #b5b5b5 !important;
+                background-color: rgba(239, 239, 237, 0.9) !important; 
+            }
+
+            .search-results-dropdown {
+                top: 52px !important;
+                z-index: 2000 !important; 
+                box-shadow: 0px 8px 16px rgba(0,0,0,0.2) !important;
+            }
+
+            .duyuru-kutusu {
+                position: absolute !important;
+                top: 62px !important; 
+                left: 10px !important;
+                right: 10px !important;
+                width: auto !important; 
+                text-align: center !important; 
+                z-index: 999 !important;
+                background-color: #fff5f5 !important; 
+                border: 1px solid #e9e2e2 !important;
+                border-top: none !important; 
+                border-radius: 0 0 8px 8px !important; 
+                padding: 12px !important;
+                box-shadow: 0px 4px 10px rgba(0,0,0,0.05) !important;
+            }
+
+            .yanip-sonen-yazi {
+                font-size: 15px !important; 
+                display: inline-block !important;
+                margin: 2px 0 !important;
+            }
+        }
+
 </style>
-
 </head>
-
 
 <body>
     <div class="topnav">
@@ -249,53 +256,38 @@ p {
     </div>
 
     <div style="max-width: 650px; margin:0 auto; padding: 40px 20px;">
-       <h1 style="text-align: center;">INRI Archive</h1>
-       <div class="duyuru-kutusu"> 
-       <span class="yanip-sonen-yazi">SİTEMİZ YENİLENMİŞTİR!!</span>
-       <br>
-       <span class="yanip-sonen-yazi">YENİ BELGELER EKLENMİŞTİR!!</span>
-       </div>
-       <img src="ataht.jpg" style="width: 100%; height: auto;">
-       <p style="text-align: center;"><a href="mailto:mistervatsin0@gmail.com">Öneri ve Şikayetleriniz İçin</a></p>
-       <p style="text-align: center;"><a href="https://patreon.com/inriarchive?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink">Bizlere Destek Olmak İsterseniz PATREON</a></p>
-       <h2>Arşivdeki Belgeler</h2>
+        <h1 style="text-align: center;">INRI Archive</h1>
+        <div class="duyuru-kutusu"> 
+            <span class="yanip-sonen-yazi">SİTEMİZDEKİ YAZILAR GÜNCELLENMEKTEDİR!!</span>
+        </div>
+        <img src="ataht.jpg" style="width: 100%; height: auto;">
+        <p style="text-align: center;"><a href="mailto:mistervatsin0@gmail.com">Öneri ve Şikayetleriniz İçin</a></p>
+        <p style="text-align: center;"><a href="https://patreon.com/inriarchive?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink">Bizlere Destek Olmak İsterseniz PATREON</a></p>
+        <h2>Arşivdeki Belgeler</h2>
 
-       <ul class="arsiv-list">
-           <li><a href="wells.html">H.G. WELLS DÜNYA TARİHİ (1927)</a></li>
-           <li><a href="harbi.umumi.html">HARBİ UMUMİNİN MENŞEİLERİ (1915)</a></li>
-           <li><a href="minber.ro.html">MİNBER GAZETESİ MUSTAFA KEMAL PAŞA RÖPORTAJI (1918)</a></li>
-           <li><a href="malumat.gaz.html">MALUMAT GAZETESİ</a></li>
-           <li><a href="karagoz.gaz.html">KARAGÖZ GAZETESİ</a></li>
-           <li><a href="harpmec.html">HARP MECMUASI</a></li>
-           <li><a href="hat.html">DEVLET BELGELERİ</a></li>
-           <li><a href="midhat.html">MİDHAT PAŞA SERİSİ</a></li>
-           <li><a href="abrahaml.html">ABRAHAM LINCOLN (1885)</a></li>
-           <li><a href="haritalar.html">HARİTALAR</a></li>
-           <li><a href="fotoğraflar.html">FOTOĞRAFLAR</a></li>
-       </ul>
-
+        <ul class="arsiv-list">
+            <li><a href="minber.ro.html">MİNBER GAZETESİ MUSTAFA KEMAL PAŞA RÖPORTAJI (1918)</a></li>
+            <li><a href="harpmec.html">HARP MECMUASI</a></li>
+            <li><a href="hat.html">DEVLET BELGELERİ</a></li>
+            <li><a href="midhat.html">MİDHAT PAŞA SERİSİ</a></li>
+            <li><a href="haritalar.html">HARİTALAR</a></li>
+            <li><a href="fotoğraflar.html">FOTOĞRAFLAR</a></li>
+        </ul>
     </div>
 
 <script>
-    //ARŞİV VERİTABANI
+// ARŞİV VERİTABANI
 const arsivVeritabani = [
     {
        title: "MİNBER GAZETESİ RÖPORTAJI (1918)",
        url: "minber.ro.html",
        desc: "Mustafa Kemal Atatürk'ün 1918 tarihinde Cihan Harbi'nin Bitişinden Hemen Sonra Verdiği Röportaj",
        keywords: "Mustafa Kemal Cihan Harbi Savaş Röportaj Atatürk Osmanlı Cephe"
-
-    },
-    {
-        title: "MALUMAT GAZETESİ (1896)",
-        url: "malumat.gaz.html",
-        desc:"1896 Yılına Ait Malumat Gazetesinin Kırkıncı Sayısı",
-        keywords: "Malumat Gazete Matbaa Yazı Osmanlı"
     },
     {
         title:"HARP MECMUASI (1915)",
         url:"harpmec.html",
-        desc:"1915 Yılına Ait Harp Mecmuası Gazetesinin İlk Beş Sayısı",
+        desc:"1915 Yılına Ait Harp Mecmuası",
         keywords: "Harp mecmuası Harp Cihan Harbi Birinci Dünya Savaşı"
     },
     {
@@ -311,12 +303,6 @@ const arsivVeritabani = [
         keywords: "Midhat Paşa Abdülhamid Jön Türk Tanzimat Vali Taif"
     },
     {
-        title:"ABRAHAM LINCOLN",
-        url:"abrahaml.html",
-        desc: "ABD'nin On Altıncı Devlet Başkanı Abraham Lincoln Hakkında Yazılmış Osmanlıca Kitap",
-        keywords:"Abraham Lincoln ABD Amerika Batı Başkan"
-    },
-    {
         title:"HARİTALAR SERİSİ",
         url:"haritalar.html",
         desc:"Belirli Olaylara Dair Haritalar",
@@ -327,12 +313,6 @@ const arsivVeritabani = [
         url:"fotoğraflar.html",
         desc:"Belirli Olay ve Kişiler Hakkında Fotoğraflar",
         keywords:"Fotoğraf Eski Osmanlı Belge Görüntü"
-    },
-    {
-        title:"H.G. WELLS - DÜNYA TARİHİ (1927)",
-        url:"wells.html",
-        desc:"H.G. Wells'in Neşrettiği 'Dünya Tarihi' Adlı Kitabın 1927 Yılına Ait Baskısını İçeren Seri",
-        keywords:"Wells Osmanlıca Cumhuriyet Dünya Tarih Savaş"
     },
     {
         title:"MAHMUD ŞEVKET PAŞA'YA RAPOR (1912)",
@@ -394,9 +374,7 @@ const arsivVeritabani = [
         desc:"Enver Paşa'nın Sarıkamış'ta ki Durumu Hakkında Bir Rapor",
         keywords:"Enver Paşa Sarıkamış Belge Osmanlıca Belge"
     }
-
 ];
-
 
 const searchInput = document.getElementById("searchInput");
 const resultsDropdown = document.getElementById("resultsDropdown");
@@ -448,6 +426,5 @@ document.addEventListener("click", function(event) {
     }
 });
 </script>
-
 </body>
 </html>
