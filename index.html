@@ -40,6 +40,8 @@
         background-color: #EFEFED;
         color: #111111;            
         font-family: "Times New Roman", Times, Georgia, serif;
+        position: relative;
+
     }
 
     h1, h2 {
@@ -165,6 +167,33 @@
         margin-top: 4px;
         font-family: "Times New Roman", Times, serif;
         font-style: italic; 
+    } 
+
+    .btn-container {
+        position: fixed; 
+        bottom: 30px;       
+        left: 50%;          
+        transform: translateX(-50%); 
+        z-index: 9999;      
+    }
+
+
+    .guncel-btn {
+        padding: 15px 20px;
+       font-size: 1rem;
+       background-color: #000000;
+       color: white;
+       border: 1px solid #000000;
+       cursor: pointer;
+       text-transform: uppercase;
+       transition: background-color 0.2s ease, color 0.2s ease;
+       white-space: nowrap; 
+    }
+
+    .guncel-btn:hover {
+       background-color: #ffffff;
+       color: #000000;
+       border: 1px solid #000000;
     }
 
     @media screen and (max-width: 768px) {
@@ -233,6 +262,10 @@
             display: inline-block !important;
             margin: 2px 0 !important;
         }
+
+        h1 {
+            text-align: center;
+        }
     }
 </style>
 </head>
@@ -243,6 +276,12 @@
             <input type="text" id="searchInput" placeholder="Aramak için.." autocomplete="off">
             <div id="resultsDropdown" class="search-results-dropdown"></div>
         </div>
+    </div>
+
+    <div class="btn-container">
+        <a href="guncel.html">
+          <button class="guncel-btn">Katkıda Bulunmak İçin Tıklayın!</button>
+        </a>
     </div>
 
     <div style="max-width: 650px; margin:0 auto; padding: 30px 20px;">
