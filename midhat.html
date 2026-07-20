@@ -8,7 +8,7 @@
 
     <style>
         body {
-            background-image: linear-gradient(rgba(239, 239, 237, 0.85), rgba(239, 239, 237, 0.85)), url(midhatark.webp);
+            background-image: linear-gradient(rgba(239, 239, 237, 0.85), rgba(239, 239, 237, 0.85));
             background-color: #EFEFED;
             color: #111111;         
             position: relative;
@@ -68,20 +68,24 @@
         background: none !important;
         background-color: #EFEFED !important;
         background-image: none !important;
-
-            a   {
-        text-decoration: none;
-        display: flex;
-        justify-content: center;
-        color: #000000;
-        font-size: 18px; 
-        transition: color 0.3s ease;
-        }
     }
+
+    @media screen and (max-width: 768px) {
+    body {
+        background: none !important;
+        background-color: #EFEFED !important;
+    }
+
+    .ana-ekran-sol {
+        position: relative; /* Mobilde absolute'dan kurtaralım */
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+        top: auto;
+        left: auto;
     }
 }
-
-
+   
     </style>
 </head>
 
@@ -96,3 +100,4 @@
     </ul>
 </body>
 </html>
+
