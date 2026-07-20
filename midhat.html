@@ -8,9 +8,9 @@
 
     <style>
         body {
-            background-image: linear-gradient(rgba(239, 239, 237, 0.85), rgba(239, 239, 237, 0.85));
+            background-image: linear-gradient(rgba(239, 239, 237, 0.85), rgba(239, 239, 237, 0.85)), url(midhatark.webp);
             background-color: #EFEFED;
-            color: #111111;         
+            color: #111111;        
             position: relative;
             margin: 0;
             padding: 0;
@@ -58,34 +58,29 @@
             font-size: 1.5rem;
             transition: color 0.2s;
         }
+        
         .ana-ekran-sol:hover {
             color: #4d4c4c;
             border-color: #4d4c4c;
         }
 
         @media screen and (max-width: 768px) {
-    body {
-        background: none !important;
-        background-color: #EFEFED !important;
-        background-image: none !important;
-    }
+            body {
+                background: none !important;
+                background-color: #EFEFED !important;
+                background-image: none !important;
+            }
 
-    @media screen and (max-width: 768px) {
-    body {
-        background: none !important;
-        background-color: #EFEFED !important;
-    }
-
-    .ana-ekran-sol {
-        position: relative; /* Mobilde absolute'dan kurtaralım */
-        display: block;
-        text-align: center;
-        margin-bottom: 20px;
-        top: auto;
-        left: auto;
-    }
-}
-   
+            .ana-ekran-sol {
+                position: relative;
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                top: auto;
+                left: auto;
+            }
+        }
     </style>
 </head>
 
