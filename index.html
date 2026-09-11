@@ -10,7 +10,7 @@
 <style>
 
     body {
-        background-image: linear-gradient(rgba(239, 239, 237, 0.85), rgba(239, 239, 237, 0.85)), url(bonapartee.webp);
+        background-image: linear-gradient(rgba(239, 239, 237, 0.85), rgba(239, 239, 237, 0.85)), url(bonaparteee.webp);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -64,7 +64,7 @@
      }
 
     h1 {
-        font-size: 3.5rem;
+        font-size: 3.5s rem;
         font-weight: 900;
         letter-spacing: normal;
         color: #000000;
@@ -74,11 +74,14 @@
     }
         
     h2 {
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-family: Georgia, 'Times New Roman', Times, serif; 
     }
 
     p {
         font-family: serif;
+        display: flex;
+        justify-content: center;
+        color:#4d1e1e
     }
 
     .topnav {
@@ -172,7 +175,7 @@
 
 
     .guncel-btn {
-        padding: 15px 20px;
+       padding: 15px 20px;
        font-size: 1rem;
        background-color: #000000;
        color: white;
@@ -187,6 +190,14 @@
        background-color: #ffffff;
        color: #000000;
        border: 1px solid #000000;
+    }
+
+    .inrip {
+        position: fixed;
+        bottom: 30px;
+        left: 91%;
+        transform: translateX(-50%);
+        z-index: 9999;
     }
 
     @media screen and (max-width: 768px) {
@@ -251,7 +262,7 @@
             margin-bottom: 20px !important;
             order: -1;
             z-index: 100 !important;
-            left: 60%;
+            left: 50%;
         }
     }
 </style>
@@ -271,10 +282,17 @@
         </a>
     </div>
 
+    <div class="inrip">
+        <a href="inriportal.html">
+            <img src="INRIProject.png" width="250">
+        </a>
+    </div>
+
     <div style="max-width: 650px; margin:0 auto; padding: 30px 20px;">
         <h1 style="font-size: 80px; font-weight: 900;">INRI Archive</h1>
         <div class="duyuru-kutusu"> 
         </div>
+        <p><em>INRI Archive bir INRI Project projesidir</em></p>
         <p style="text-align: center;"><a href="mailto:mistervatsin0@gmail.com"><em>Öneri ve Şikayetleriniz İçin</em></a></p>
         <p style="text-align: center;"><a href="https://patreon.com/inriarchive?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink"><em>Destek Olmak İsterseniz PATREON</em></a></p>
         <p style="text-align: center;"><a href="https://independent.academia.edu/Mehmet%C3%96zkan181"><em>Academia.edu Sayfasından PDF Halinde Dosyalara Ulaşabilirsiniz</em></a></p>
