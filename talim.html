@@ -26,6 +26,15 @@
         transition: color 0.3s ease;
         }
 
+    h5 {
+        display: flex;
+        justify-content: center;
+        font-size: 24px;
+        color:red;
+        animation: blink-animation 1.0s infinite ease-in-out;
+
+    }
+
     a:hover {
         color: #7e7b7b !important; 
         background-color: transparent !important;
@@ -36,6 +45,14 @@
     h1 {
         text-align: center;
     }
+
+    @keyframes blink-animation {
+     0% {opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+
+    }
+
 </style>
 
 <a href="index.html">Ana Ekran</a>
@@ -43,6 +60,8 @@
 <body>
 
 <h1>Talim ve Terbiye (1915) - Mustafa Kemal</h1>
+
+<h5>BİTTİ</h5>
 
 <a href="./TalimTH.pdf" download>PDF Olarak İndirmek İçin</a>
 
