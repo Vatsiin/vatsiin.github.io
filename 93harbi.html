@@ -26,6 +26,15 @@
         transition: color 0.3s ease;
         }
 
+    h5 {
+        display: flex;
+        justify-content: center;
+        font-size: 24px;
+        color:green;
+        animation: blink-animation 1.0s infinite ease-in-out;
+
+    }
+
     a:hover {
         color: #7e7b7b !important; 
         background-color: transparent !important;
@@ -36,13 +45,22 @@
     h1 {
         text-align: center;
     }
+
+    @keyframes blink-animation {
+     0% {opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+
+    }
 </style>
 
-    <a href="index.html">Ana Ekran</a>
+<a href="index.html">Ana Ekran</a>
 
 <body>
 
 <h1>1293 Seferi</h1>
+
+<h5>DEVAM EDİYOR</h5>  
 
 <table border="1">
     <tr>
